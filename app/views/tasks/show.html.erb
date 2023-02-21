@@ -1,7 +1,7 @@
 <ul class="list-group">
   <li class="list-group-item">Title: <%= @task.title %></li>
   <li class="list-group-item">Details: <%= @task.details %></li>
-  <li class="list-group-item">Complete:
+  <li class="list-group-item">Complete?
     <% if @task.completed  %>
   <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" checked disabled>
   <% else %>
@@ -9,3 +9,6 @@
   <% end %>
   </li>
 </ul>
+<div class="p-3">
+  <%= link_to "Edit task", edit_task_path %>
+</div>
