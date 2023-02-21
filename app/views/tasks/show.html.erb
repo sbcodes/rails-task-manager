@@ -1,5 +1,11 @@
 <ul class="list-group">
   <li class="list-group-item">Title: <%= @task.title %></li>
   <li class="list-group-item">Details: <%= @task.details %></li>
-  <li class="list-group-item">Complete: <%= @task.completed %></li>
+  <li class="list-group-item">Complete:
+    <% if @task.completed  %>
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" checked disabled>
+  <% else %>
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+  <% end %>
+  </li>
 </ul>
