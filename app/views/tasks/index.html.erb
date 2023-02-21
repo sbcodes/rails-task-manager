@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <% @tasks.each do |task| %>
+    <li class="list-group-item"><%= link_to task.title, details_path %></li>
+  <% end %>
+</ul>
