@@ -1,13 +1,14 @@
 class TasksController < ApplicationController
-  def create(title, details, completed)
-    Task.create(title: title, details: details, completed: completed)
+  def create
+    Task.new(task_params).save
+    redirect_to root_path
   end
 
   def index
     @tasks = Task.all
   end
 
-  def details
-    @id = params[:id]
+  def show
+    @task = Task.find(params[:id])
   end
 end
